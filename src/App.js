@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import MatchNowButton from './MatchNowButton';
 import CavaLinkLogo from './CavaLinkLogo.png';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 function App() {

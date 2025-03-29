@@ -1,21 +1,32 @@
-import React from 'react';
-import teamPhoto from '../assets/team.jpg';
-
 function About() {
   return (
-    <div className="page-container">
-      <section className="page-header">
-        <h1>About CavaLink</h1>
-        <p>Connecting UVA students since 2023</p>
+    <div className="page-container"> {/* Main container */}
+      <section className="page-header"> {/* Header section */}
+        <h1>About Us</h1>
+        <p>Learn about our mission</p>
       </section>
-      
-      <section className="content-section">
-        <img src={teamPhoto} alt="Our team" className="content-image" />
+
+      <div className="image-text-row"> {/* Image + text row */}
+        <img 
+          src="/team-photo.jpg" 
+          alt="Our team" 
+          className="content-image" 
+        />
         <div className="text-content">
-          <h2>Our Mission</h2>
-          <p>We help Cavaliers find their perfect match for classes, events, and friendships.</p>
+          <h2>Our Story</h2>
+          <p>Founded in 2023, we connect UVA students...</p>
         </div>
-      </section>
+      </div>
+
+      <div className="card-grid"> {/* Card layout */}
+        <div className="card">
+          <img src="/member1.jpg" className="card-image" alt="Team member" />
+          <div className="card-body">
+            <h3 className="card-title">John Doe</h3>
+            <p>Founder</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

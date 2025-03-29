@@ -1,0 +1,26 @@
+/* src/MatchNowButton.css */
+.match-now-btn {
+    position: fixed;               /* Position the button relative to the viewport */
+    top: 20px;                     /* 20px from the top */
+    right: 20px;                   /* 20px from the right */
+    background-color: #003B73;     /* UVA Blue */
+    color: white;                  /* White text */
+    border: none;                  /* No border */
+    padding: 12px 24px;            /* Padding for the button */
+    font-size: 18px;               /* Larger font size */
+    font-weight: bold;             /* Bold text */
+    text-transform: uppercase;     /* Uppercase text */
+    border-radius: 50px;           /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    cursor: pointer;              /* Cursor looks like a pointer */
+    transition: all 0.3s ease;     /* Smooth transition */
+  }
+  
+  .match-now-btn:hover {
+    background-color: #f46600;     /* UVA Orange on hover */
+    transform: translateY(-3px);   /* Slightly lift the button */
+  }
+  
+  .match-now-btn:active {
+    transform: translateY(1px);    /* Button clicks with a slight downwards effect */
+  }

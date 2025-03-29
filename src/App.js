@@ -3,6 +3,7 @@ import './App.css';
 import MatchNowButton from './MatchNowButton';
 import CavaLinkLogo from './CavaLinkLogo.png';
 
+
 function App() {
   return (
     <div className="App">
@@ -21,10 +22,10 @@ function App() {
       
       <header className="App-header">
         <h1 className="cavalink-title">CavaLink</h1>
-        <p className="font-dmserif text-xl">Cavalink UI</p>
+        <p className="subtitle">For Cavaliers hoo don’t want to third-wheel their UVA experience.</p>
       </header>
       
-      <MatchNowButton />  
+      <MatchNowButton className="match-now-button" />
     </div>
   );
 }

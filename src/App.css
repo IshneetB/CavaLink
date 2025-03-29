@@ -11,8 +11,8 @@
 /* Navigation - Keep your existing styles */
 .navbar {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 50px;
+  right: 225px;
 }
 
 .nav-links {
@@ -33,18 +33,17 @@
   text-transform: uppercase;
 }
 
-/* New Title Styling */
 .cavalink-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 1000;
   color: #232D4B;
   font-size: 4rem;
   letter-spacing: -0.05em;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 300px; /* Move the title down from the top */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%); /* Only horizontal centering */
   text-transform: uppercase;
   line-height: 0.9;
 }
@@ -59,7 +58,7 @@
 }
 
 .logo {
-  position: fixed;  /* Keeps it in the top-left even on scroll */
+  position: absolute;  /* Keeps it in the top-left even on scroll */
   top: 10px;
   left: 10px;
   height: 130px;  /* Adjust size as needed */
@@ -71,3 +70,22 @@
   margin-left: 100px;  /* Push text further from the logo */
   font-size: 1.5rem;
 }
+
+.subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 450;
+  color: #232D4B;
+  font-size: 1.5rem; /* Smaller than title to look like a subtitle */
+  letter-spacing: -0.02em;
+  margin-top: 20px; /* Space between title and subtitle */
+  position: absolute;
+  top: 2000%; /* Moves subtitle lower */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers properly */
+  text-align: center;
+  max-width: 80%;
+  line-height: 1.2;
+
+  
+}
+

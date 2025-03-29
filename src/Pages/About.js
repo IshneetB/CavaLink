@@ -1,3 +1,4 @@
+import '../../styles/PageStyles.css'; 
 function About() {
   return (
     <div className="page-container"> {/* Main container */}

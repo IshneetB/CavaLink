@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
-import MatchNowButton from './MatchNowButton';  // Import the button component
+import MatchNowButton from './MatchNowButton';
+import CavaLinkLogo from './CavaLinkLogo.png';
 
 function App() {
   return (
     <div className="App">
+      {/* Logo positioned separately from the header */}
+      <img src={CavaLinkLogo} alt="CavaLink Logo" className="logo" />
+
       <header className="App-header">
         <p className="font-dmserif text-xl">Cavalink UI</p>
       </header>
       
-      <MatchNowButton />  {/* Add the button component here */}
-      {/* Other content */}
+      <MatchNowButton />  
     </div>
   );
 }

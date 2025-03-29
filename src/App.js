@@ -23,8 +23,12 @@ function App() {
         <h1 className="cavalink-title">CavaLink</h1>
         <p className="subtitle">For Cavaliers hoo don’t want to third-wheel their UVA experience.</p>
       </header>
-      
+
+      {/* First Match Now Button */}
       <MatchNowButton className="match-now-button" />
+
+      {/* Second Match Now Button under subtitle */}
+      <button className="match-now-button-secondary">Match Now</button>
     </div>
   );
 }

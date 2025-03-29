@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>CavaLink</h1>
+        <p className="font-dmserif text-xl">Cavalink UI</p>
       </header>
     </div>
   );

@@ -113,3 +113,9 @@
 .match-now-button-secondary:active {
   transform: translateY(1px);    /* Button clicks with a slight downwards effect */
 }
+
+.nav-links .active {
+  font-weight: bold;
+  color: #ff8c00; /* UVA orange */
+  border-bottom: 2px solid #ff8c00;
+}

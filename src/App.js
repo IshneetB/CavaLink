@@ -29,7 +29,7 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/team" element={<OurTeam />} />
+        <Route path="/team" element={<OurTeam />} />
           <Route path="/spotlight" element={<Spotlight />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/contact" element={<Contact />} />
@@ -56,20 +56,20 @@ function App() {
               </section>
 
               {/* Images Section */}
-              <div className="image-container" style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)' }}>
-                <div className="image-box" style={{ textAlign: 'center' }}>
-                  <img src={require('./ishneet.png')} alt="Ishneet Bhatia" className="profile-image" />
-                  <p className="image-caption">Ishneet Bhatia</p>
-                </div>
-                <div style={{ fontSize: '3rem', padding: '0 20px', color: '#003B73' }}>+</div>
-                <div className="image-box" style={{ textAlign: 'center' }}>
-                  <img src={require('./dishitha.png')} alt="Dishitha Dhakshin" className="profile-image" />
-                  <p className="image-caption">Dishitha Dhakshin</p>
-                </div>
-              </div>
+              <div id="team" className="image-container">
+  <div className="image-box">
+    <img src={require('./ishneet.png')} alt="Ishneet Bhatia" className="profile-image" />
+    <p className="image-caption">Ishneet Bhatia</p>
+  </div>
+  <div style={{ fontSize: '3rem', padding: '0 20px', color: '#003B73' }}>+</div>
+  <div className="image-box">
+    <img src={require('./dishitha.png')} alt="Dishitha Dhakshin" className="profile-image" />
+    <p className="image-caption">Dishitha Dhakshin</p>
+  </div>
+</div>
 
               {/* Spacer to extend page */}
-              <div style={{ height: '10000px' }}></div>
+              <div style={{ height: '7500px' }}></div>
             </>
           } />
         </Routes>

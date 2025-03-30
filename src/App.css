@@ -20,11 +20,11 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .nav-links a {
-  color: #232D4B;
+  color: #1d3ea3;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -35,13 +35,13 @@
 
 .cavalink-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-weight: 1000;
-  color: #232D4B;
-  font-size: 4rem;
+  font-weight: 2000;
+  color: #0d2466;
+  font-size: 8rem;
   letter-spacing: -0.05em;
   margin: 0;
   position: absolute;
-  top: 300px; /* Move the title down from the top */
+  top: 260px; /* Move the title down from the top */
   left: 50%;
   transform: translateX(-50%); /* Only horizontal centering */
   text-transform: uppercase;
@@ -59,7 +59,7 @@
 
 .logo {
   position: absolute;  /* Keeps it in the top-left even on scroll */
-  top: 10px;
+  top: 15px;
   left: 10px;
   height: 130px;  /* Adjust size as needed */
   width: auto;
@@ -73,9 +73,9 @@
 
 .subtitle {
   font-family: 'Bebas Neue', sans-serif;
-  font-weight: 450;
-  color: #232D4B;
-  font-size: 1.5rem; /* Smaller than title to look like a subtitle */
+  font-weight: 1000;
+  color: #0d2466;
+  font-size: 1.6rem; /* Smaller than title to look like a subtitle */
   letter-spacing: -0.02em;
   margin-top: 20px; /* Space between title and subtitle */
   position: absolute;

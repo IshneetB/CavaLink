@@ -46,6 +46,17 @@ function App() {
               <MatchNowButton className="match-now-button" />
               {/* Spacer to extend page */}
               <div style={{ height: '10000px' }}></div>
+              <div className="image-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50vh' }}>
+  <div className="image-box" style={{ textAlign: 'center' }}>
+    <img src={require('./ishneet.png')} alt="Ishneet Bhatia" className="profile-image" />
+    <p className="image-caption">Ishneet Bhatia</p>
+  </div>
+  <div style={{ fontSize: '3rem', padding: '0 20px' }}>+</div>
+  <div className="image-box" style={{ textAlign: 'center' }}>
+    <img src={require('./dishitha.png')} alt="Dishitha Dhakshin" className="profile-image" />
+    <p className="image-caption">Dishitha Dhakshin</p>
+  </div>
+</div>
             </>
           } />
         </Routes>

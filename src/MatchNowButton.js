@@ -1,11 +1,20 @@
-// src/MatchNowButton.js
-import React from 'react';
-import './MatchNowButton.css';  // Import the updated CSS file
+import { useNavigate } from 'react-router-dom';
+import './MatchNowButton.css';
 
-const MatchNowButton = () => {
+function MatchNowButton() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // This will properly navigate using React Router
+    navigate('/club-match');
+  };
+
   return (
-    <button className="match-now-btn">
-      Match Now
+    <button 
+      className="match-now-button" 
+      onClick={handleClick}
+    >
+      MATCH NOW
     </button>
   );
 }

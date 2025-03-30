@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import MatchNowButton from './MatchNowButton';
+import MatchNowButton from './MatchNowButton'; 
 import CavaLinkLogo from './CavaLinkLogo.png';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
@@ -9,6 +9,7 @@ import Explore from './Pages/Explore';
 import OurTeam from './Pages/OurTeam';
 import Spotlight from './Pages/Spotlight';
 import Match from './Pages/Match';
+import ClubMatchForm from './Pages/ClubMatchForm';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/explore" element={<Explore />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/match" element={<Match />} />
+          <Route path="/club-match" element={<ClubMatchForm />} />
           <Route path="/" element={
             <>
               {/* Home Section */}
@@ -43,7 +45,7 @@ function App() {
                 <p className="subtitle">For Cavaliers hoo don't want to third-wheel<br />their UVA experience.</p>
               </header>
               
-              <MatchNowButton className="match-now-button" />
+              <MatchNowButton /> 
               
               {/* About Section */}
               <section id="about" className="about-section">

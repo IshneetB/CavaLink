@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
-import './styles/PageStyles.css'; // Your custom styles
+import './styles/PageStyles.css'
 import CavaLinkLogo from './CavaLinkLogo.png';
 
 // Import all page components

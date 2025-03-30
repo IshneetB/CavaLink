@@ -1,116 +1,51 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
-import './styles/PageStyles.css'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import MatchNowButton from './MatchNowButton';
 import CavaLinkLogo from './CavaLinkLogo.png';
-
-// Import all page components
-import Home from './Pages/Home';
 import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Explore from './Pages/Explore';
+import Home from './Pages/Home';
+import Match from './Pages/Match';
 import OurTeam from './Pages/OurTeam';
 import Spotlight from './Pages/Spotlight';
-import Explore from './Pages/Explore';
-import Contact from './Pages/Contact';
-import Match from './Pages/Match';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        {/* Logo with Home link */}
-        <NavLink 
-          to="/" 
-          className={({ isActive }) => 
-            isActive ? "logo active" : "logo"
-          }
-        >
-          <img src={CavaLinkLogo} alt="CavaLink Logo" />
-        </NavLink>
-
-        {/* Main Navigation */}
-        <nav className="navbar">
-          <ul className="nav-links">
-            <li>
-              <NavLink 
-                to="/about"
-                className={({ isActive }) => 
-                  isActive ? "nav-item active" : "nav-item"
-                }
-              >
-                ABOUT
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/our-team"
-                className={({ isActive }) => 
-                  isActive ? "nav-item active" : "nav-item"
-                }
-              >
-                OUR TEAM
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/spotlight"
-                className={({ isActive }) => 
-                  isActive ? "nav-item active" : "nav-item"
-                }
-              >
-                SPOTLIGHT
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/explore"
-                className={({ isActive }) => 
-                  isActive ? "nav-item active" : "nav-item"
-                }
-              >
-                EXPLORE
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/contact"
-                className={({ isActive }) => 
-                  isActive ? "nav-item active" : "nav-item"
-                }
-              >
-                CONTACT
-              </NavLink>
-            </li>
-            <li>
-              <NavLink 
-                to="/match"
-                className={({ isActive }) => 
-                  isActive ? "match-button active" : "match-button"
-                }
-              >
-                MATCH NOW
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Page Content Area */}
-        <main className="main-content">
+      <Router>
+        <div className="App">
+          {/* Logo */}
+          <Link to="/">
+            <img src={CavaLinkLogo} alt="CavaLink Logo" className="logo" />
+          </Link>
+  
+          <nav className="navbar">
+            <ul className="nav-links">
+              <li><Link to="/about">ABOUT</Link></li>
+              <li><Link to="/team">OUR TEAM</Link></li>
+              <li><Link to="/spotlight">SPOTLIGHT</Link></li>
+              <li><Link to="/explore">EXPLORE</Link></li>
+              <li><Link to="/contact">CONTACT</Link></li>
+            </ul>
+          </nav>
+  
           <Routes>
-            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/our-team" element={<OurTeam />} />
-            <Route path="/spotlight" element={<Spotlight />} />
-            <Route path="/explore" element={<Explore />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/match" element={<Match />} />
-            
-            {/* Optional 404 catch-all route */}
-            <Route path="*" element={<div>Page Not Found</div>} />
+            {/* Add other routes similarly */}
+            <Route path="/" element={
+              <>
+                <header className="App-header">
+                  <h1 className="cavalink-title">CavaLink</h1>
+                  <p className="subtitle">For Cavaliers hoo don't want to third-wheel their UVA experience.</p>
+                </header>
+                <MatchNowButton className="match-now-button" />
+              </>
+            } />
           </Routes>
-        </main>
-      </div>
-    </Router>
-  );
-}
-
-export default App;
+        </div>
+      </Router>
+    );
+  }
+  
+  export default App;

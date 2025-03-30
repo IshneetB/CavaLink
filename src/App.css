@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;500&display=swap');
 
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 .App {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   position: relative;
@@ -10,17 +16,22 @@
 
 /* Navigation */
 .navbar {
-  position: absolute;
-  top: 50px;
-  right: 225px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding: 20px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .nav-links {
   display: flex;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .nav-links a {
@@ -33,6 +44,22 @@
   text-transform: uppercase;
 }
 
+/* Logo */
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  height: 80px;
+  z-index: 1001;
+}
+
+/* Home Section */
+.App-header {
+  padding-top: 180px;
+  text-align: center;
+  width: 100%;
+}
+
 .cavalink-title {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 2000;
@@ -40,115 +67,96 @@
   font-size: 8rem;
   letter-spacing: -0.05em;
   margin: 0;
-  position: absolute;
-  top: 260px; /* Move the title down from the top */
-  left: 50%;
-  transform: translateX(-50%); /* Only horizontal centering */
-  text-transform: uppercase;
   line-height: 0.9;
-}
-
-.App-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%; /* Ensure it spans the full width */
-  padding: 10px 20px; /* Add padding for spacing */
-  position: relative;
-}
-
-.logo {
-  position: absolute; /* Keeps it in the top-left even on scroll */
-  top: 15px;
-  left: 10px;
-  height: 130px; /* Adjust size as needed */
-  width: auto;
-  z-index: 1000;
-}
-
-.font-dmserif {
-  margin-left: 100px; /* Push text further from the logo */
-  font-size: 1.5rem;
 }
 
 .subtitle {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 1000;
   color: #0d2466;
-  font-size: 1.6rem; /* Smaller than title to look like a subtitle */
+  font-size: 1.6rem;
   letter-spacing: -0.02em;
-  margin-top: 20px; /* Space between title and subtitle */
-  position: absolute;
-  top: 2000%; /* Moves subtitle lower */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centers properly */
+  margin-top: 20px;
+}
+
+/* About Section */
+.about-section {
+  padding: 100px 2rem;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  max-width: 80%;
-  line-height: 1.2;
 }
 
-/* MatchNowButton.css */
-.match-now-button-secondary {
-  position: absolute; /* Position the button relative to the viewport */
-  top: 500px; /* 20px from the top */
-  right: 457px; /* 20px from the right */
-  background-color: #003B73; /* UVA Blue */
-  color: white; /* White text */
-  border: none; /* No border */
-  padding: 12px 24px; /* Padding for the button */
-  font-size: 18px; /* Larger font size */
-  font-weight: bold; /* Bold text */
-  text-transform: uppercase; /* Uppercase text */
-  border-radius: 50px; /* Rounded edges */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  cursor: pointer; /* Cursor looks like a pointer */
-  transition: all 0.3s ease; /* Smooth transition */
-}
-
-.match-now-button-secondary:hover {
-  background-color: #f46600; /* UVA Orange on hover */
-  transform: translateY(-3px); /* Slightly lift the button */
-}
-
-.match-now-button-secondary:active {
-  transform: translateY(1px); /* Button clicks with a slight downwards effect */
-}
-
-.nav-links .active {
-  font-weight: bold;
-  color: #ff8c00; /* UVA orange */
-  border-bottom: 2px solid #ff8c00;
-}
-
-.App {
-  min-height: 100vh; /* Ensures the page takes up full viewport height */
-}
-
+/* Images Section */
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  margin-top: 30vh; /* Adjust the margin to move the images higher */
+  margin: 50px 0;
+  flex-wrap: wrap;
 }
 
-.image-container div {
-  font-size: 5rem;
-  padding: 0 20px;
-  color: #003B73; /* Dark blue color for the plus sign */
+.image-box {
+  text-align: center;
+  margin: 0 20px;
 }
 
 .profile-image {
-  width: 200px; /* Adjust size */
-  height: auto;
-  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #003B73;
 }
 
 .image-caption {
-  font-family: 'Roboto', sans-serif; /* Match the nav text */
-  font-size: 1rem; /* Adjust size as needed */
-  font-weight: 500;
-  text-transform: uppercase; /* Same as nav links */
-  color: #1d3ea3; /* Match the color of the nav links */
-  margin-top: 15px; /* Space between image and caption */
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.plus-sign {
+  font-size: 3rem;
+  color: #003B73;
+  padding: 0 20px;
+}
+
+/* Button */
+.match-now-button {
+  margin: 30px auto;
+  display: block;
+  background-color: #003B73;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.match-now-button:hover {
+  background-color: #f46600;
+  transform: translateY(-3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cavalink-title {
+    font-size: 4rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    height: 60px;
+  }
 }

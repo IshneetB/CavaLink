@@ -119,3 +119,7 @@
   color: #ff8c00; /* UVA orange */
   border-bottom: 2px solid #ff8c00;
 }
+
+.App {
+  min-height: 100vh; /* Ensures the page takes up full viewport height */
+}

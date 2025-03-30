@@ -3,13 +3,11 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import MatchNowButton from './MatchNowButton';
 import CavaLinkLogo from './CavaLinkLogo.png';
-import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Explore from './Pages/Explore';
-import Home from './Pages/Home';
-import Match from './Pages/Match';
 import OurTeam from './Pages/OurTeam';
 import Spotlight from './Pages/Spotlight';
+import Match from './Pages/Match';
 
 function App() {
   return (
@@ -22,7 +20,7 @@ function App() {
 
         <nav className="navbar">
           <ul className="nav-links">
-            <li><Link to="/about">ABOUT</Link></li>
+            <li><Link to="/#about">ABOUT</Link></li> {/* Changed to hash link */}
             <li><Link to="/team">OUR TEAM</Link></li>
             <li><Link to="/spotlight">SPOTLIGHT</Link></li>
             <li><Link to="/explore">EXPLORE</Link></li>
@@ -31,7 +29,6 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/about" element={<About />} />
           <Route path="/team" element={<OurTeam />} />
           <Route path="/spotlight" element={<Spotlight />} />
           <Route path="/explore" element={<Explore />} />
@@ -44,8 +41,19 @@ function App() {
                 <p className="subtitle">For Cavaliers hoo don't want to third-wheel their UVA experience.</p>
               </header>
               <MatchNowButton className="match-now-button" />
-              {/* Spacer to extend page */}
-              <div style={{ height: '10000px' }}></div>
+              
+              {/* About Section */}
+              <section id="about" className="page-container" style={{ marginTop: '100px', padding: '2rem' }}>
+                <h1>About Us</h1>
+                <p className="subtitle">
+                  CavaLink is built by Hoos, for Hoos.
+                  With over a thousand student groups, there's a place for everyone at UVA—the challenge? Finding it. 
+                  CavaLink cuts through the clutter, helping you prioritize and match with the right clubs effortlessly.
+                  Whether you're looking for identity-based associations, academic or pre-professional societies, 
+                  service opportunities, Greek life, or niche interest groups, we've got your back.
+                  Skip the endless interest meetings. Let our algorithm do the work.
+                </p>
+              </section>
 
               {/* Images Section */}
               <div className="image-container" style={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)' }}>
@@ -59,6 +67,9 @@ function App() {
                   <p className="image-caption">Dishitha Dhakshin</p>
                 </div>
               </div>
+
+              {/* Spacer to extend page */}
+              <div style={{ height: '10000px' }}></div>
             </>
           } />
         </Routes>
@@ -68,4 +79,3 @@ function App() {
 }
 
 export default App;
-

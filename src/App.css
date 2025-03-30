@@ -145,6 +145,12 @@
   margin-top: 50vh;  /* Center the images vertically */
 }
 
+.image-container div {
+  font-size: 3rem;
+  padding: 0 20px;
+  color: #003B73; /* Dark blue color for the plus sign */
+}
+
 .profile-image {
   width: 200px; /* Adjust size */
   height: auto;

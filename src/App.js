@@ -53,17 +53,9 @@ function App() {
               </section>
 
               {/* Images Section */}
-              <div className="image-container">
-                <div className="image-box">
-                  <img src={require('./ishneet.png')} alt="Ishneet Bhatia" className="profile-image" />
-                  <p className="image-caption">Ishneet Bhatia</p>
-                </div>
-                <div className="plus-sign">+</div>
-                <div className="image-box">
-                  <img src={require('./dishitha.png')} alt="Dishitha Dhakshin" className="profile-image" />
-                  <p className="image-caption">Dishitha Dhakshin</p>
-                </div>
-              </div>
+              <section id="ourTeam" className="ourTeam-section">
+                <OurTeam />
+              </section>
             </>
           } />
         </Routes>

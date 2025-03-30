@@ -14,7 +14,7 @@ function OurTeam() {
         <div className="plus-sign">+</div>
         <div className="image-box">
           <img src={require('./dishitha.png')} alt="Dishitha Dhakshin" className="profile-image" />
-          <p className="image-caption">DISHITHA DHAHSHIN</p>
+          <p className="image-caption">DISHITHA DHAKSHIN</p>
           <p1> Co-Founder and Co-President</p1>
         </div>
       </div>
